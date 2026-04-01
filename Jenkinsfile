@@ -14,8 +14,12 @@ pipeline {
                 echo 'Testing...'
             }
         }
+
         stage('Deploy') {
-             steps {
-        sh 'cp /var/lib/jenkins/workspace/cicd-project/index.html /var/www/html/'
+            steps {
+                sh 'cp /var/lib/jenkins/workspace/cicd-project/index.html /var/www/html/'
+            }
+        }
+
     }
 }
